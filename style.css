@@ -1,0 +1,133 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --ff-heading: 'Staatliches', cursive;
+    --ff-text: 'Palanquin', sans-serif;
+
+    --fs-heading: 4rem;
+    --fs-heading-small: 2rem;
+    --fs-text: 1.4rem;
+
+    --color-heading-small: #4A4E69;
+    --color-text: #23053A;
+
+    --bg-primary: #EFF1FF;
+    --bg-header: #8E9AAF;
+    --bg-heading: #CBC0D3;
+    --bg-heading-small: #FEEAFA;
+    
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    background-color: var(--bg-primary);
+}
+
+.page {
+    max-width: 38.4rem;
+    margin: 0 auto;
+}
+
+header {
+    height: 28rem;
+    background-color: var(--bg-header);
+    text-align: center;
+    padding: 3.2rem 0;
+}
+
+header h1 {
+    font-family: var(--ff-heading);
+    font-size: var(--fs-heading);
+    font-weight: 400;
+    line-height: 3.4rem;
+    letter-spacing: .5px;
+    color: #FFF;
+    text-transform: uppercase;
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+    background-color: var(--bg-heading);
+    padding: .8rem 0;
+    margin: 3rem 0;
+}
+
+header img {
+    width: 13.7rem;
+    height: 13.7rem;
+}
+
+main {
+    padding: 1.4rem 3.2rem 6rem;
+    display: grid;
+    gap: 3.6rem;
+}
+
+main > p {
+    font-family: var(--ff-text);
+    font-size: var(--fs-text);
+    font-weight: 400;
+    color: var(--color-text);
+    line-height: 2rem;
+    text-align: center;
+    margin-bottom: 2.7rem;
+}
+
+.card {
+    position: relative;
+    transition: transform 200ms;
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+.card h2 {
+    font-family: var(--ff-heading);
+    font-size: var(--fs-heading-small);
+    color: var(--color-heading-small);
+    font-weight: 400;
+    line-height: 3.4rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    background-color: var(--bg-heading-small);
+    border-radius: 2rem;
+    width: fit-content;
+    padding: 0 2.3rem;
+    position: absolute;
+    top: 1.6rem;
+    right: 1.6rem;
+    animation: topdown 1s 350ms backwards;
+}
+
+.card img {
+    animation: downtop 750ms;
+}
+
+@keyframes topdown {
+    0% {
+        opacity: 0;
+        transform: translateY(-15px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes downtop {
+    0% {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
